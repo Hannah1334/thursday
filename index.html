@@ -1,0 +1,466 @@
+<script>resizeTo(screen.availWidth, screen.availHeight);</script> 
+
+<style>
+body{
+background-image: url('https://i.imgur.com/88xALrQ.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+background-color:#000000;
+}
+
+::-webkit-scrollbar {width: 4px; height: 4px;}
+::-webkit-scrollbar-track {background: none;}
+::-webkit-scrollbar-thumb {background: #454545;}
+
+#line1 {
+position:absolute;
+border:2px solid #868686;
+width:50%;
+height:50%;
+top:25%;
+left:25%;
+}
+
+#line2 {
+position:absolute;
+border:2px solid #868686;
+border-radius:100%;
+width:10%;
+height:20%;
+top:40%;
+left:20%;
+}
+
+#line3 {
+position:absolute;
+border:2px solid #868686;
+border-radius:100%;
+width:10%;
+height:20%;
+top:40%;
+left:70%;
+}
+
+#line4 {
+position:absolute;
+border:2px solid #868686;
+width:50%;
+height:20%;
+top:40%;
+left:25%;
+}
+
+#pic1 {
+position:absolute;
+background-color:#000000;
+border:2px solid #868686;
+border-radius:100%;
+width:8%;
+height:16%;
+top:42%;
+left:21%;
+}
+
+#pic2 {
+position:absolute;
+background-color:#000000;
+border:2px solid #868686;
+border-radius:100%;
+width:8%;
+height:16%;
+top:42%;
+left:71%;
+}
+
+#tabbox1 {
+position:absolute;
+background-color:#000000;
+border:2px solid #868686;
+width:6%;
+height:4%;
+top:23%;
+left:26%;
+font-family: 'Aldrich', sans-serif;
+text-align:center;
+font-size:2vh;
+color:#868686;
+line-height:1.9;
+text-transform:uppercase;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox2 {
+position:absolute;
+background-color:#000000;
+border:2px solid #868686;
+width:6%;
+height:4%;
+top:23%;
+left:33%;
+font-family: 'Aldrich', sans-serif;
+text-align:center;
+font-size:2vh;
+color:#868686;
+line-height:1.9;
+text-transform:uppercase;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox3 {
+position:absolute;
+background-color:#000000;
+border:2px solid #868686;
+width:6%;
+height:4%;
+top:23%;
+left:40%;
+font-family: 'Aldrich', sans-serif;
+text-align:center;
+font-size:2vh;
+color:#868686;
+line-height:1.9;
+text-transform:uppercase;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox4 {
+position:absolute;
+background-color:#000000;
+border:2px solid #868686;
+width:6%;
+height:4%;
+top:23%;
+left:47%;
+font-family: 'Aldrich', sans-serif;
+text-align:center;
+font-size:2vh;
+color:#868686;
+line-height:1.9;
+text-transform:uppercase;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox5 {
+position:absolute;
+background-color:#000000;
+border:2px solid #868686;
+width:6%;
+height:4%;
+top:23%;
+left:54%;
+font-family: 'Aldrich', sans-serif;
+text-align:center;
+font-size:2vh;
+color:#868686;
+line-height:1.9;
+text-transform:uppercase;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox6 {
+position:absolute;
+background-color:#000000;
+border:2px solid #868686;
+width:6%;
+height:4%;
+top:23%;
+left:61%;
+font-family: 'Aldrich', sans-serif;
+text-align:center;
+font-size:2vh;
+color:#868686;
+line-height:1.9;
+text-transform:uppercase;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox7 {
+position:absolute;
+background-color:#000000;
+border:2px solid #868686;
+width:6%;
+height:4%;
+top:23%;
+left:68%;
+font-family: 'Aldrich', sans-serif;
+text-align:center;
+font-size:2vh;
+color:#868686;
+line-height:1.9;
+text-transform:uppercase;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox1:hover,#tabbox2:hover,#tabbox3:hover,#tabbox4:hover,#tabbox5:hover,#tabbox6:hover,#tabbox7:hover {
+background-color:#868686;
+color:#000000;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#title {
+position:absolute;
+background-color:#000000;
+border:2px solid #868686;
+width:48%;
+height:4%;
+left:26%;
+top:73%;
+color:#FFFFFF;
+font-family: 'Audiowide', cursive;
+text-align:center;
+font-size:2.5vh;
+line-height:1.6;
+text-transform:uppercase;
+letter-spacing:3px;
+}
+
+#content {
+position:absolute;
+overflow:auto;
+background-color:#000000;
+border:2px solid #868686;
+padding:1%;
+width:28%;
+height:26%;
+top:35%;
+left:35%;
+color:#FFFFFF;
+font-size:1.5vh;
+font-family: 'Baumans', cursive;
+}
+
+img {
+border-radius:100%;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+img:hover {
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs {
+display:inline-block;
+width:100%;
+height:100%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tab1,#tab2,#tab3,#tab4,#tab5,#tab6,#tab7,#tab8,#tab9,#tab10,#tab11,#tab12,#tab13,#tab14,#tab15,#tab16,#tab17,#tab18,#tab19,#tab20,#tab21 {
+display: none;
+}
+
+h1 {
+color:#000000;
+background-color:#868686;
+border-bottom:2px solid #444444;
+text-transform:uppercase;
+font-size:2vh;
+text-align:center;
+font-family: 'Audiowide', cursive;
+letter-spacing:3px;
+}
+
+i {
+color:#999999;
+}
+
+a {
+color:#666666;
+text-decoration:none;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+a:hover {
+color:#333333;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+b {
+color:#D1FFEA;
+font-family: 'Aldrich', sans-serif;
+}
+</style>
+
+<style type="text/css">* {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;}</style>
+<link href="https://fonts.googleapis.com/css?family=Aldrich|Audiowide|Baumans" rel="stylesheet">
+<script>function changeNavigation(id) {document.getElementById('content').innerHTML=document.getElementById(id).innerHTML}</script>
+<script>function changeNavigation1(id) {document.getElementById('pic1').innerHTML=document.getElementById(id).innerHTML}</script>
+<script>function changeNavigation2(id) {document.getElementById('pic2').innerHTML=document.getElementById(id).innerHTML}</script>
+
+<div id="line1"></div>
+<div id="line2"></div>
+<div id="line3"></div>
+<div id="line4"></div>
+
+<div id="pic1">
+<img style="width:100%;height:100%;" src="https://media.giphy.com/media/3FoCJUBWRDhlDp5NoR/giphy.gif"/>
+</div>
+<div id="pic2">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/Mlv6en7.png"/>
+</div>
+
+<div id="tabbox1">
+<span class="tabs" onClick="changeNavigation ('tab1');changeNavigation1 ('tab2');changeNavigation2 ('tab3')">Details</span>
+</div>
+<div id="tabbox2">
+<span class="tabs" onClick="changeNavigation ('tab4');changeNavigation1 ('tab5');changeNavigation2 ('tab6')">History</span>
+</div>
+<div id="tabbox3">
+<span class="tabs" onClick="changeNavigation ('tab7');changeNavigation1 ('tab8');changeNavigation2 ('tab9')">Racials</span>
+</div>
+<div id="tabbox4">
+<span class="tabs" onClick="changeNavigation ('tab10');changeNavigation1 ('tab11');changeNavigation2 ('tab12')">Items</span>
+</div>
+<div id="tabbox5">
+<span class="tabs" onClick="changeNavigation ('tab13');changeNavigation1 ('tab14');changeNavigation2 ('tab15')">Electric</span>
+</div>
+<div id="tabbox6">
+<span class="tabs" onClick="changeNavigation ('tab16');changeNavigation1 ('tab17');changeNavigation2 ('tab18')">Kinetic</span>
+</div>
+<div id="tabbox7">
+<span class="tabs" onClick="changeNavigation ('tab19');changeNavigation1 ('tab20');changeNavigation2 ('tab21')">??????</span>
+</div>
+
+<div id="title">
+Astral Entity <FONT COLOR="#666666">||</FONT> Project Thursday <FONT COLOR="#666666">||</FONT> Fifth Day
+</div>
+<div id="content">
+<h1>Subject's Stats</h1>
+<p align="center"><b>Name:</b> Cassandra Oswald <i>||</i> <b>Alias:</b> Thursday <i>||</i> <b>Model Age:</b> Five <i>||</i> <b>Model Gender:</b> Female</p>
+<br>
+<h1>F.A.I. Model 37X Appearance</h1>
+Model 37X has been adapted to fit the proportions of young Miss Oswald when she was still in the prime of her health and youth. Its height is five-feet-five-inches, and we have managed to achieve a semi-realistic weight with machinery and metal alloy, causing the vessel to weigh in at roughly one-hundred-twenty pounds. A work of art and a piece of equipment in equal parts, despite being comprised of machinery almost entirely the F.A.I. was specifically designed to appear to have human anatomy, if only for aesthetic. An energy core hides within her chest, encased by a metal box forged in the shape of a human heart. This theme extends for every vital piece of her functioning mechanisms, tucked within organ shaped chromatic cases. Her face is blank, molded after Miss Oswald’s in shape, but intentionally severely lacking in defining details. She is more akin to a blank doll/puppet, while the screen built into her synthetic flesh is supposed to fill in the blanks, allowing for incredible amounts of customization if she wishes to make changes to herself.
+<br><br>
+<h1>Subject's Behavior</h1>
+Positive signs of adaptation and free will. Subject is extremely perceptive and learns at a rate that is to be expected by a computerized Artificial Intelligence. She can break down problems fast, has an exceptional memory bank, and retains the skill to solve issues as they arise by using what she’s learned. Additionally her ability to make decisions for herself is uncanny, truly a remarkable specimen, closer to human than any specimen we’ve managed to produce so far. Drawbacks are an extremely logical mind; subject is constantly under stress, worrying three steps ahead of herself. She always takes the most reasonable route, in place of making decisions based on passion or emotion, suggesting more bugs in our programming. Further testing required.
+</div>
+
+<div id="tab1">
+<h1>Subject's Stats</h1>
+<p align="center"><b>Name:</b> Cassandra Oswald <i>||</i> <b>Alias:</b> Thursday <i>||</i> <b>Model Age:</b> Five <i>||</i> <b>Model Gender:</b> Female</p>
+<br>
+<h1>F.A.I. Model 37X Appearance</h1>
+Model 37X has been adapted to fit the proportions of young Miss Oswald when she was still in the prime of her health and youth. Its height is five-feet-five-inches, and we have managed to achieve a semi-realistic weight with machinery and metal alloy, causing the vessel to weigh in at roughly one-hundred-twenty pounds. A work of art and a piece of equipment in equal parts, despite being comprised of machinery almost entirely the F.A.I. was specifically designed to appear to have human anatomy, if only for aesthetic. An energy core hides within her chest, encased by a metal box forged in the shape of a human heart. This theme extends for every vital piece of her functioning mechanisms, tucked within organ shaped chromatic cases. Her face is blank, molded after Miss Oswald’s in shape, but intentionally severely lacking in defining details. She is more akin to a blank doll/puppet, while the screen built into her synthetic flesh is supposed to fill in the blanks, allowing for incredible amounts of customization if she wishes to make changes to herself.
+<br><br>
+<h1>Subject's Behavior</h1>
+Positive signs of adaptation and free will. Subject is extremely perceptive and learns at a rate that is to be expected by a computerized Artificial Intelligence. She can break down problems fast, has an exceptional memory bank, and retains the skill to solve issues as they arise by using what she’s learned. Additionally her ability to make decisions for herself is uncanny, truly a remarkable specimen, closer to human than any specimen we’ve managed to produce so far. Drawbacks are an extremely logical mind; subject is constantly under stress, worrying three steps ahead of herself. She always takes the most reasonable route, in place of making decisions based on passion or emotion, suggesting more bugs in our programming. Further testing required.
+</div>
+<div id="tab2">
+<img style="width:100%;height:100%;" src="https://media.giphy.com/media/3FoCJUBWRDhlDp5NoR/giphy.gif"/>
+</div>
+<div id="tab3">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/Mlv6en7.png"/>
+</div>
+
+<div id="tab4">
+<h1>Project Oswald</h1>
+<br><br>
+<h1>Journal Entry #137</h1>
+<br><br>
+<h1>Journal Entry #492</h1>
+</div>
+<div id="tab5">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/tjM4hVO.png"/>
+</div>
+<div id="tab6">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/GbJpMZJ.png"/>
+</div>
+
+<div id="tab7">
+<h1>F.A.I. Model 37X Abilities</h1>
+<br><br>
+<h1>Astral Projection Racials</h1>
+</div>
+<div id="tab8">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/CcQTGbl.png"/>
+</div>
+<div id="tab9">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/je7AliJ.png"/>
+</div>
+
+<div id="tab10">
+<h1>Equipment</h1>
+<br><br>
+<h1>Weapons</h1>
+<br><br>
+<h1>Medium</h1>
+To be unlocked.
+</div>
+<div id="tab11">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/BqmqpFr.png"/>
+</div>
+<div id="tab12">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/s6Rb3WJ.png"/>
+</div>
+
+<div id="tab13">
+<h1>Electromancy: Paige</h1>
+<i>"Often seen as the most primal or basic form of magic, Elementalists tap into one of six different elements to produce their magic. Each possesses a different mana type, and may use their spells to generate their chosen element. Eletromancy is the control of electricity. Sometimes able to tap into magnetism."</i>
+<br><br>
+<h1>Paige Spells</h1>
+Work in progress.
+</div>
+<div id="tab14">
+<img style="width:100%;height:100%;" src="https://media.giphy.com/media/2gZHYw6iKGsNT536bO/giphy.gif"/>
+</div>
+<div id="tab15">
+<img style="width:100%;height:100%;" src="https://media.giphy.com/media/39sYi3jkmFbj8kdWq5/giphy.gif"/>
+</div>
+
+<div id="tab16">
+<h1>Kinetics: N/A</h1>
+<i>"Forcient is a tree which focuses on the physical constants and laws of the universe, and how one may manipulate these constants and laws to suit their agenda. Forcient is divided into three different branches, each of which controls a small array of forces. A Kinetics mage focuses primarily on the forces of movement; the manipulation of kinetic and potential energy are their specialty. However, many mages may find they have gained access to the manipulation of pressure, and other forces outside of gravity and magnetism. A Kinetics mage's magic is very special- while it is magic, their spells often inflict physical damage."</i>
+<br><br>
+<h1>Paige Spells</h1>
+To be unlocked.
+</div>
+<div id="tab17">
+<img style="width:100%;height:100%;" src="https://media.giphy.com/media/62e0mQkVLB7Iw3zqcy/giphy.gif"/>
+</div>
+<div id="tab18">
+<img style="width:100%;height:100%;" src="https://media.giphy.com/media/2xPGQ1Wd46J0ExX4hL/giphy.gif"/>
+</div>
+
+<div id="tab19">
+<h1>Archmage</h1>
+To be unlocked.
+</div>
+<div id="tab20">
+<img style="width:100%;height:100%;" src="https://media.giphy.com/media/2zoCClpm1tPkXQAL6P/giphy.gif"/>
+</div>
+<div id="tab21">
+<img style="width:100%;height:100%;" src="https://media.giphy.com/media/SiCZl02N3OS9UG5zxc/giphy.gif"/>
+</div>
+
+<embed style="height: 0%; width: 0%;"src="Thursday.mp3" autostart="true" loop="true">
